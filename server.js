@@ -15,9 +15,15 @@ const apiKeyAuth = (req, res, next) => {
     }
 }
 
-app.use(apiKeyAuth)
+app.use(apiKeyAuth);
 
-app.get("/posts", (res, res) => {
+app.get("/posts", (req, res) => {
     const db = JSON.parse(fs.readFileSync("db.json", "utf-8"));
     res.json(db.posts || []);
-})
+});
+
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+    console.log(`API server running at http://localhost:${PORT}`);
+});
