@@ -1,9 +1,0 @@
-{
-  "posts": [
-    { "id": 1, "title": "Hello World", "author": "mikan0131" },
-    { "id": 2, "title": "JSON Server is cool", "author": "ChatGPT" }
-  ],
-  "comments": [
-    { "id": 1, "body": "Nice post!", "postId": 1 }
-  ]
-}
